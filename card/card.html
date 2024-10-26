@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./card.css">
+</head>
+<body>
+
+  <div class="items-area">
+    <div class="sorted-by-container">
+      <div class="sort-container">
+        <img src="./src/icons/filter.svg" alt="">
+      </div>
+  
+      <div class="featured-container">
+         <p><span>Sort By</span><br>Featured</p>
+      </div>
+  
+      <div class="arrow-container">
+        <div class="arrow">▼</div>
+      </div>
+  
+      
+    </div>
+
+
+    <div class="product-card">
+
+        <div class="product-header">
+          
+          
+            <div class="stock-info">
+                <div class="on-sale-advice-container"> 
+                    <span><div class="dot"></div>ON SALE</span>
+                </div>
+                
+                <span class="stock-status">In stock</span>
+            </div>
+
+          
+
+
+            <div class="quantity-selection">
+                <div class="number-arrows">
+                    <div class="arrow down">▼</div>
+                </div>
+                <div class="quantity-input">
+                    <input type="text" value="1" min="0" max="999999">
+                </div>
+                <div class="number-arrows">
+                    <div class="arrow up">▲</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-image">
+          <figure class="figure-product-image">
+            <img src="./src/img/dragon-ball.jpg" alt="Product Image">
+          </figure>
+        </div>
+
+        <div class="product-info">
+          <div class="product-name-category">
+            <div class="product-name">Dragon Ball</div>
+            <div class="category-icon">
+              <img src="./src/icons/dragon.svg" alt="Category Icon">
+            </div>
+          </div>
+          <div class="price-container">
+            <div class="product-price">$450.55</div><div class="product-price old-price">$522.50</div>
+          </div>
+        </div>
+      
+        <div class="product-description">
+          <span class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+        </div>
+
+        
+       <div class="product-actions">
+        <div class="details-container">
+          <a href="#" class="button details-button">Details</a>
+        </div>
+          <button class="button add-button">
+            <span>Add</span>
+            <div class="cart-icon-container">
+              <img src="./src/icons/cart.svg" alt="cart">
+
+            </div>
+
+          </button>
+        </div>
+    
+    </div>
+
+    <div class="pagination-container">
+      <button class="pagination-button left">
+        <img src="./src/icons/pagination-arrow.svg" alt="">
+      </button>
+      <ul class="pagination">
+        <li class="page-item tached">1</li>
+        <li class="page-item">2</li>
+        <li class="page-item">3</li>
+        <li class="page-item">4</li>
+      </ul>
+      <button class="pagination-button right">
+        <img src="./src/icons/pagination-arrow.svg" alt="">
+      </button>
+    </div>
+  </div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+* :after, :before{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(./src/fonts/Roboto-regular.ttf) format('truetype');
+}
+
+:root{
+    --green-chicks-gold: #39e29d;
+}
+
+body{ 
+    font-family: "Roboto-Regular";
+}
+
+img, svg{
+    vertical-align: middle;
+}
+
+p, span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+   /* white-space: nowrap;*/
+}
+
