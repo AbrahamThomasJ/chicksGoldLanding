@@ -1,33 +1,4 @@
-/*
 
-Pagination Class
-Encapsulates all the pagination logic, making the code modular and easy to manage.
-
-currentPage: Tracks the currently active page.
-
-totalPages and visiblePages: Set the total number of pages and define the number of visible page buttons.
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-Methods
-init: Initializes pagination by setting up page buttons and event listeners.
-
-addEventListeners: Adds click events to the left (prevButton) and right (nextButton) arrow buttons for navigation.
-
-changePage: Switches to the requested page if it falls within a valid range.
-
-updatePaginationButtons: Updates the displayed page buttons based on the current page.
-
-calculateVisiblePages: Determines which page buttons to display according to the current page, centering when possible.
-
-createPageButton: Creates and configures a page number button.
-
-updateArrowButtons: Disables arrow buttons if the user is on the first or last page.
-
-
-
-
-*/
 
 .pagination-container {
     display: flex;
