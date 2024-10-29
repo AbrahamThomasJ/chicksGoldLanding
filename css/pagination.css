@@ -1,0 +1,87 @@
+/*
+
+Pagination Class
+Encapsulates all the pagination logic, making the code modular and easy to manage.
+
+currentPage: Tracks the currently active page.
+
+totalPages and visiblePages: Set the total number of pages and define the number of visible page buttons.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Methods
+init: Initializes pagination by setting up page buttons and event listeners.
+
+addEventListeners: Adds click events to the left (prevButton) and right (nextButton) arrow buttons for navigation.
+
+changePage: Switches to the requested page if it falls within a valid range.
+
+updatePaginationButtons: Updates the displayed page buttons based on the current page.
+
+calculateVisiblePages: Determines which page buttons to display according to the current page, centering when possible.
+
+createPageButton: Creates and configures a page number button.
+
+updateArrowButtons: Disables arrow buttons if the user is on the first or last page.
+
+
+
+
+*/
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /* margin-top: 20px;*/
+}
+
+.pagination-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: #303242;
+    border: 1px solid #454b88;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-arrow:disabled {
+    cursor: not-allowed;
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.pagination-button {
+    background-color: #323341;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-button.active {
+    background-color: #5762d5;
+    color: #fff;
+   /* text-decoration: line-through;*/
+}
+
+.pagination-button:hover:not(.active) {
+    background-color: #353856;
+    color: #fff;
+}

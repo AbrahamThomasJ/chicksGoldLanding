@@ -1,0 +1,42 @@
+* :after, :before{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../src/fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+:root{
+
+    /* COLORS */
+    --white: #ffffff;
+    --green-chicks-gold: #39e29d;
+    --gray-card-letters: #9698a2;
+    --gray-button: #3f4254;
+    --gray-background: #34384b;
+    --gray-sort-by: #353a4f;
+    --gray-quantity-items: #394057;
+    --gray-sort-by-letter: #c2c3ca;
+    --blue-add-button: #5762d5;
+    --dark-blue-add-button: #454da8;
+    --white-letter-button: #fafcff;
+    --gray-cards-section: #323341;
+
+}
+
+body{ 
+    font-family: "Roboto-Regular";
+    background: var(--gray-background);
+}
+
+img, svg{
+    vertical-align: middle;
+}
+
+p, span{
+    overflow: hidden;
+    text-overflow: ellipsis;
+   /* white-space: nowrap;*/
+}
+
