@@ -1,22 +1,45 @@
-.items-area{
-    padding: 30px;
-    background-color: var(--gray-cards-section);
+.main-container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.items-pagination-sorting-section{
+    padding: 20px;
+    background-color: var(--gray-cards-section);
+    border: 1px solid #7893dd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+
+
+.items-container{
+    padding: 30px;
+    background-color: #323341;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
     gap: 20px;
+
 }
 
 .sorted-by-container{
-    width: 219px;
+    width: 95%;
     height: 30px;
     padding: 15px 10px;
-    background-color: var(--gray-background);
+    background-color: var(--gray-card-section);
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: var(--gray-sort-by-letter);
 }
 
 .sort-container{
@@ -333,3 +356,68 @@
     width: 14px;
 }
 
+
+
+
+.sorted-by{
+    width: 219px;
+    height: 30px;
+    padding: 15px 10px;
+    background-color: var(--gray-background);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sort-container{
+    background: #004f9e00;
+    
+
+}
+
+.sort-container img{
+    width: 30px;
+}
+
+.arrow{
+    color: rgb(255, 255, 255);
+}
+
+.featured-container{
+    width: 116px;
+
+}
+
+
+.featured-container p{
+    color: var(--white);
+    font-size: 14px;
+}
+
+.featured-container span{
+    font-size: 10px;
+    color: var(--gray-sort-by-letter);
+}
+
+
+
+
+
+@media (width > 500px){
+    .items-container{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        width: 95%;
+        gap: 20px;
+    }
+
+    .product-card{
+        width: 200px;
+        height: 265px;
+    }
+}
+
+@media (width > 1000px){
+
+}

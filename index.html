@@ -3,123 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/items-section.css">
-    <link rel="stylesheet" href="./css/pagination.css">
+    <title>Paginación con Cards Detalladas</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <script src="./js/item.js"></script>
+    <script src="./js/itemRenderer.js"></script>
+    <script src="./js/pagination.js"></script>
 </head>
 <body>
 
-  <div class="items-area">
-    <div class="sorted-by-container">
-      <div class="sort-container">
-        <img src="./src/icons/filter.svg" alt="">
-      </div>
-  
-      <div class="featured-container">
-         <p><span>Sort By</span><br>Featured</p>
-      </div>
-  
-      <div class="arrow-container">
-        <div class="arrow">▼</div>
-      </div>
-  
-      
+
+<main class="main-container">
+
+   
+
+    <div class="main-nav-container">
+      <div class="game"></div>
+      <div class="shearch"></div>
+      <div class="price"></div>
     </div>
-   <section class="items-section" id="items-section">
-
-    <div class="product-card">
-
-        <div class="product-header">
-          
-          
-            <div class="stock-info">
-                <div class="on-sale-advice-container"> 
-                    <span><div class="dot"></div>ON SALE</span>
-                </div>
-                
-                <span class="stock-status">In stock</span>
-            </div>
-
-          
-
-
-            <div class="quantity-selection">
-                <div class="number-arrows">
-                    <div class="arrow down">▼</div>
-                </div>
-                <div class="quantity-input">
-                    <input type="text" value="1" min="0" max="999999">
-                </div>
-                <div class="number-arrows">
-                    <div class="arrow up">▲</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="product-image">
-          <figure class="figure-product-image">
-            <img src="./src/img/dragon-ball.jpg" alt="Product Image">
-          </figure>
-        </div>
-
-        <div class="product-info">
-          <div class="product-name-category">
-            <div class="product-name">Dragon Ball</div>
-            <div class="category-icon">
-              <img src="./src/icons/dragon.svg" alt="Category Icon">
-            </div>
-          </div>
-          <div class="price-container">
-            <div class="product-price">$450.55</div><div class="product-price old-price">$522.50</div>
-          </div>
-        </div>
-      
-        <div class="product-description">
-          <span class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-        </div>
-
-        
-       <div class="product-actions">
-        <div class="details-container">
-          <a href="#" class="button details-button">Details</a>
-        </div>
-          <button class="button add-button">
-            <span>Add</span>
-            <div class="cart-icon-container">
-              <img src="./src/icons/cart.svg" alt="cart">
-
-            </div>
-
-          </button>
-        </div>
-      
-      
-
-      
-
-    </section>
-
-    <div class="pagination-container">
-      <button class="pagination-arrow" id="prev">&lt;</button>
-      <div class="pagination-buttons" id="paginationButtons"></div>
-      <button class="pagination-arrow" id="next">&gt;</button>
-  </div>
-
-
-
-
-
-
-  </div>
-  
- <!-- <script src="./js/dinamicItemsSection.js"></script>-->
-  <script src="./js/pagination.js"></script>
-
-
-
-
     
+
+
+    <div class="items-pagination-sorting-section">
+        
+        <div class="sorted-by-container">
+            <div class="items-availables-page">
+                <p>Showing 20 - from 125</p>
+            </div>
+
+            <div class="sorted-by">
+                <div class="sort-container">
+                  <img src="./src/icons/filter.svg" alt="">
+                </div>
+            
+                <div class="featured-container">
+                   <p><span>Sort By</span><br>Featured</p>
+                </div>
+            
+                <div class="arrow-container">
+                  <div class="arrow">▼</div>
+                </div>
+            
+                
+              </div>
+        </div>
+
+
+        <div  class="items-container" id="items-container"></div>
+        <div class="pagination-container">
+            
+            <button id="prev" class="pagination-button arrow-button">&lt;</button>
+            <div class="pagination-buttons" id="paginationButtons"></div>
+            <button id="next" class="pagination-button arrow-button">&gt;</button>
+        
+        </div>
+        
+    </div>    
+    
+
+
+</main>
+
+
+
+<script>
+    const itemRenderer = new ItemRenderer('items-container');
+    const pagination = new Pagination(items.length, 15, itemRenderer, 'paginationButtons');
+</script>
+
 </body>
 </html>
